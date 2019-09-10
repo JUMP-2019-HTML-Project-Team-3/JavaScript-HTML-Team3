@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="greg.css">
+<link rel="stylesheet" href="../TeamTemplate.css">
+
+<head>
+</head>
+
+<!--Layout (Flex box Layout)-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<body>
+    <!-- NAV BAR HTML -->
+    <div id="navblock">
+            <nav>
+              <ul>
+                <h1 class="left">Look at Our Restaurants!.com</h1>
+                <li><a href="../Index/Index.html">Home</a>
+                  <div class="dropdown">
+                      <button class="dropbtn" id="navblock">Our Foodie's Pages</button>
+                      <div class="dropdown-content">
+                        <a href="#">Greg's Page</a>
+                        <a href="../Omran/Omran_webpage.html">Chef Recipe</a>
+                        <a href="../Rebecca/RebeccaPage.html">Salki's Noms Cafe</a>
+                      </div>
+                  </div>
+              </ul>
+            </nav>
+          </div>
+    <!-- NAV BAR END -->
+
+    <div class="outer-box-frame">
+    <span class="topSpan"><p class="TopFont"><b>Order Food</b></p></span>
+    <section>
+        <aside>
+            <p>
+                <!--Feature 7 Forms-->
+                <form>
+                    Name:<br>
+                    <input type="text" name="firstname"><br>
+                    Deliver Latitude:<br>
+                    <input type="text" name="latDeliv" id="latDelivid"><br>
+                    Deliver Longitude:<br>
+                    <input type="text" name="longDeliv" id="longDelivid">
+                </form>
+
+                <!--Feature 9 SVG Scalable Vector Graphics-->
+                <!--Feature 10 OnClick Event-->
+                <svg width="100" height="100" onclick="getLocation()">
+                    <circle  class="circleHov" cx="50" cy="50" r="40" stroke="black" stroke-width="4" fill="lightblue" />
+                    <text fill="yellow" font-size="16" font-family="Verdana" x="16" y="55">Location</text>
+                </svg>
+
+        </aside>
+        <article>
+            <!--Feature 4 Lists-->
+            <!--Feature 1 Attributes-->
+            <!--Feature 2 Formating The sub the del-->
+            <nav>
+                <ul id-="ul1">
+                    <li id="li1">
+                        <i>Pancakes </i><sub>$ 9.99</sub>
+                        <p>
+                            <span class="foodPic">
+                                <img src="gregpics/pancakes.jpg">
+                            </span>
+                        </p>
+                    </li>
+                    <li id="li1">
+                        <i>Bacon Egg Cheese </i><sub>$ 5.99</sub>
+                        <p>
+                                <span class="foodPic">
+                                    <img src="gregpics/bec.jpg">
+                                </span>
+                        </p>
+                    </li>
+                    <li id="li1">
+                        <i>Omelete </i><sub>$ 9.99</sub>
+                        <p>
+                                <span class="foodPic">
+                                    <img src="gregpics/omelet.jpg">
+                                </span>
+                        </p>
+                    </li>
+                    <li id="li1">
+                        <i>Tacos </i><sub>$ 7.99</sub>
+                        <p>
+                                <span class="foodPic">
+                                    <img src="gregpics/tacos.jpg">
+                                </span>
+                        </p>
+                    </li>
+                    <li id="li1">
+                        <i><del>Burgers <sub>$ 12.99</sub></del></i>
+                        <p>
+                                <span class="foodPic">
+                                    <img src="gregpics/hamburger.jpg">
+                                </span>
+                        </p>
+                    </li>
+                    <li id="li1">
+                        <i>Milkshakes </i><sub>$ 4.50</sub>
+                        <p>
+                                <span class="foodPic">
+                                    <img src="gregpics/milkshake.jpg">
+                                </span>
+                        </p>
+                    </li>
+                    <li id="li1">
+                        <i>Buffalo Wings <sub>$ 10</sub></i>
+                        <p>
+                                <span class="foodPic">
+                                    <img src="gregpics/wings.jpg">
+                                </span>
+                        </p>
+                    </li>
+                    <li id="li1">
+                        <i><del>Baked Ziti <sub>$ 8.99</sub></del></i>
+                        <p>
+                                <span class="foodPic">
+                                    <img src="gregpics/ziti.jpg">
+                                </span>
+                        </p>
+                    </li>
+                    <li id="li1">
+                        <i>Soda </i><sub>$ 1.25</sub>
+                        <p>
+                                <span class="foodPic">
+                                    <img src="gregpics/soda.jpg">
+                                </span>
+                        </p>
+                    </li>
+                </ul>
+            </nav>
+            </p>
+        </article>
+    </section>
+    <footer>
+        <p>
+            Contact Us
+        </p>
+    </footer>
+    </div>
+</body>
+
+    <!--Feature 8 Geolocation-->
+    <script>
+        var x = document.getElementById("demo");
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition);
+            } else {
+                x.innerHTML = "Geolocation is not supported by this browser.";
+            }
+        }
+
+        function showPosition(position) {
+            var lat = document.getElementById("latDelivid");
+            var long = document.getElementById("longDelivid");
+            lat.value = position.coords.latitude;
+            long.value = position.coords.longitude;
+        }
+    </script>
+
+</html>
