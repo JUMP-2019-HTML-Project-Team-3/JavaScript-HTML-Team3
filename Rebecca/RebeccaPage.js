@@ -12,6 +12,10 @@ function domloaded(){
     ctx.strokeText("Salki's Noms",10,50);
 }
 
+function checkCookie() {
+	
+}
+
 function moreInfo() {
   var txt;
   var more = prompt("Anything else you'd like to tell us? Here's your chance!");
