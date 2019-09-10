@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+   <head>
+	<link rel="stylesheet" type="text/css" href="../TeamTemplate.css">
+    <link rel="stylesheet" type="text/css" href="RebeccaPage.css">
+	<script type="text/javascript" src="RebeccaPage.js"></script>
+
+
+      <title>Salki's Noms</title>
+  </head>
+  
+  <!-- NAV BAR HTML -->
+    <div id="navblock">
+        <nav>
+          <ul>
+            <h1 class="left">Look at Our Restaurants!.com</h1>
+            <li><a href="Index.html">Home</a>
+              <div class="dropdown">
+                  <button class="dropbtn" id="navblock">Our Foodie's Pages</button>
+                  <div class="dropdown-content">
+                    <a href="greg.html">Greg's Page</a>
+                    <a href="Omran_webpage.html">Chef Recipe</a>
+                    <a href="#">Salki's Noms Cafe</a>
+                  </div>
+              </div>
+          </ul>
+        </nav>
+      </div>
+<!-- NAV BAR END -->
+<div class = "outer-box-frame">
+  <canvas id="myCanvas" width="200" height="100"></canvas>
+  
+    <div class = "inline-center">
+	<a class ="format-links" href="#menu">View Menu</a>
+	<a class="format-link-color" href="#special">View Special Events</a>
+    <a class ="format-links" href ="#review">Leave a Review</a>
+	</div>
+    <img class = "inline-image-center" src = "cafeimages/Salki-Logo.png" alt = "Salki Logo">
+    <hr>
+
+    <p class = "inline-center">Come on down to Salki's Noms to get some food!</p>
+
+    <iframe class = "inline-image-center" width="560" height="315" src="https://www.youtube.com/embed/5FKw7-SC7VI" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+    </iframe>
+    <hr>
+	<h1 id="special" class="inline-center"> Special Events</h1>
+	
+	<p> <img class="float-image resize-image" src="cafeimages/catcafe.jpeg" alt="Cat Cafe Promo"> On November 10, consider dropping by to meet some feline friends who will be roaming the cafe all day!
+	</p>
+	
+	<br>
+	<br>
+	<br> 
+	<br>
+	<br>
+	<br>
+	<br>
+	<hr>
+
+    <h1 id="menu" class = "inline-center"> Menu </h1>
+	
+    <table style="width:100%">
+            <tr>
+              <th>Name</th>
+              <th>Description</th> 
+              <th>Picture</th>
+              <th>Price</th>
+            </tr>
+            <tr>
+              <td>Cat Cookies</td>
+              <td>Cat-shaped cookies with icing topping</td>
+              <td><img class = "resize-image inline-image-center"   src = "cafeimages/cookies.jpg" alt="Cat Cookies"></td>
+              <td>$3.00 for 5</td>
+            </tr>
+            <tr>
+              <td>Rainbow Waffles</td>
+              <td>Stack of seven waffles in good ol' ROYGBIV</td>
+              <td><img class = "resize-image inline-image-center"  src = "cafeimages/rainbowwaffle2.jpg" alt="Bear Waffles"></td>
+              <td>$5.00</td>
+            </tr>
+            <tr>
+              <td>Mini Breakfast</td>
+              <td>For when someone just wants a 'little' breakfast; bacon and eggs</td>
+              <td><img class = "resize-image inline-image-center"  src = "cafeimages/baconeggs.jpg" alt="Mini Breakfast"></td>
+              <td>$3.00</td>
+            </tr>
+            <tr>
+                <td>Bear Sundae</td>
+                <td>Hot fudge sundae with oreo-cookie ears and a chocolate drizzle face</td>
+                <td><img class = "resize-image inline-image-center"  src = "cafeimages/bearsundae.jpg" alt="Bear Sundae"></td>
+                <td>$7.50</td>
+            </tr>
+            <tr>
+              <td>Pusheen Macarons</td>
+              <td>Limited Time Only: delicious macarons inspired by Pusheen!</td>
+              <td><img class = "resize-image inline-image-center"  src = "cafeimages/pusheen.jpg" alt="Pusheen Macarons" ></td>
+              <td>$10.00 for 12</td>
+          </tr>
+          </table>
+	<hr>
+	<div class = "inline-center"> <a class ="format-links" href = "https://pusheen.com">Visit Pusheen Here!</a> </div>
+	<hr>
+    <h1 class = "inline-center"> Leave a Review! </h1>
+    <p class = "inline-center">If you've sampled any of our treats, please leave a review and tell us what you think!</p>
+
+    <form class = "inline-center" id = "review">
+            Nickname:<br>
+            <input type="text" name="nickname"><br>
+            What Did You Try?<br>
+            <input type="radio" name="menuitem" value="Cat Cookies" checked> Cat Cookies <br>
+            <input type="radio" name="menuitem" value="Rainbow Waffles"> Rainbow Waffles <br>
+            <input type="radio" name="menuitem" value="Mini Breakfast"> Mini Breakfast <br>
+            <input type="radio" name="menuitem" value="Bear Sundae"> Bear Sundae <br>
+            <input type="radio" name="menuitem" value="Pusheen Macarons"> Pusheen Macarons <br>
+            Rating Between 1(terrible) to 5(amazing): <br>
+            <input type="number" name="rating" min="1" max="5"> <br>
+            <input type="submit" value="Submit">
+          </form>
+	</div>
+  </body>
+</html>
