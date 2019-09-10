@@ -1,0 +1,107 @@
+/* Index CSS Template */
+
+/* Image Formats */
+    #img1 {
+        max-width: 200px;
+        height:auto;
+    }
+
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0 4px;
+      }
+
+    .column {
+        flex: 50%;
+        padding: 0 4px;
+      }
+
+    .column img {
+        margin-top: 8px;
+        vertical-align: middle;
+      }
+
+    /* Image Gallery .div CSS */
+    div.gallery {
+        border: 1px solid #ccc;
+        align-content: center;
+        border-image: auto;
+    }
+    
+    div.gallery:hover {
+        border: 1px solid #777;
+    }
+    
+    div.gallery img {
+        width: auto;
+        height: 150px; 
+    }
+    
+    div.desc {
+        padding: 15px;
+        text-align: left;
+    }
+    
+    * {
+        box-sizing: border-box;
+        
+    }
+    
+    .responsive {
+        padding: 0 6px;
+        float: left;
+        width: 24.99999%;
+    }
+    
+    @media only screen and (max-width: 700px) {
+        .responsive {
+        width: 49.99999%;
+        margin: 6px 0;
+        }
+    }
+    
+    @media only screen and (max-width: 500px) {
+        .responsive {
+        width: 100%;
+        }
+    }
+    
+    .clearfix:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+/* End Image Formats */
+
+/* Text Formats */
+    /* Element defaults */
+    p {
+        /* paragraph centering */
+        text-align: center;
+        animation: name duration timing-function delay iteration-count direction fill-mode;
+    }
+
+    h1,h2,h3,h4,h5,h6{
+        /* header centering */
+        text-align: center;
+    }
+    /* class element defaults */
+    .left{
+        /* any element calling class center */
+        text-align: left;
+    }
+/* End Text Formats */
+
+/* Button Formats */
+    #div1,
+    #div2 {
+    float: left;
+    width: 100px;
+    height: 35px;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid black;
+    }
+
+/* End Button Formats */
