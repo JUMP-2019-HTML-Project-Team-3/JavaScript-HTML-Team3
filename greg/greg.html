@@ -179,15 +179,14 @@
                 for(i = 0; i < cookieList.length; i++)
                 {
                     document.getElementById("li" + cookieList[i]).style = "";
-                    cookieList.splice(i, 1);
                 }
-                
-                 document.cookie = JSON.stringify(cookieList);
             }catch(err)
             {
-                cookieList = [];
-                document.cookie = JSON.stringify(cookieList);
+
             }
+
+            cookieList = [];
+            document.cookie = JSON.stringify(cookieList);
         }
 
         function checkItem(aItem)
