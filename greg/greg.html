@@ -187,6 +187,8 @@
 
             cookieList = [];
             document.cookie = JSON.stringify(cookieList);
+
+            checkCookies();
         }
 
         function checkItem(aItem)
@@ -244,10 +246,13 @@
 
             for(i = 0; i < cookieList.length; i ++)
             {
-                document.getElementById("li" + cookieList[i]).style = "border-style: solid; background-color: grey;";
+                var tempObj = document.getElementById("li" + cookieList[i]);
+                tempObj.style.borderStyle = "solid";
+                tempObj.style.backgroundColor = "grey";
+
                 total = total + parseFloat(document.getElementById("sub" + cookieList[i]).innerText,10);
             }
-
+            
             document.getElementById("total").innerHTML = "<p>Total: $" + total.toFixed(2) + "</p>";
         }
     </script>
