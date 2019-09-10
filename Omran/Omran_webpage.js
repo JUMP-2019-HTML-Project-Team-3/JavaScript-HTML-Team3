@@ -1,19 +1,17 @@
-id = "demo";
-
-<button onclick="RecipeConf()">See source</button>
+id="demo";
 
 function RecipeLink() {
     alert("Okay, here is the link!  Ready to receive it?");
-    if (alert == true) window.open('https://techwelkin.com/how-to-open-a-new-tab-on-click-of-a-button-html-javascript');
+    window.open('https://shokugekinosoma.fandom.com/wiki/Roast_Pork,_Just_Kidding');
 }
 function RecipeConf() {
-    var txt;
-    var r = confirm("Warning: this webpage contains anime.  Proceed?");
+    var txt = "No link for you.";
+    var r = confirm("Warning: the following link contains anime.  Proceed?");
 
     if (r == true) {
         RecipeLink();
+        document.getElementById("demo").innerHTML = "See source";
     }
-    else txt = "No link for you."
-    // Replaces entire document with txt
-    document.write(txt);
+    else document.getElementById("demo").innerHTML = txt;
+    // Replaces entire document with txt - use getElementById instead of document.write!
 }
