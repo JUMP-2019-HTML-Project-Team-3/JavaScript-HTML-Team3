@@ -7,6 +7,7 @@
     font-weight: bolder !important;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif !important;
     font-size: large !important;
+    border-radius: 5px/5px;
   }
   /* Set Login Button right */
   div.right{
@@ -93,12 +94,13 @@
 	
 	/* Creates border */
 	.outer-box-frame {
-		border: 1rem solid #2b506e;
+    border: 1rem solid #2b506e;
+    border-radius: 5px/5px;
 	}
 
 	/* Sets background color */
 	body {
-		background-color: wheat;
+    background-color: wheat;
 	}
 	
 	/* Tells all paragraph elements to be of this specified font-family */
