@@ -104,7 +104,7 @@
     <h1 class = "inline-center"> Leave a Review! </h1>
     <p class = "inline-center">If you've sampled any of our treats, please leave a review and tell us what you think!</p>
 
-    <form class = "inline-center" id = "review">
+    <form class = "inline-center" id = "review" >
             Nickname:<br>
             <input type="text" name="nickname"><br>
             What Did You Try?<br>
@@ -115,8 +115,9 @@
             <input type="radio" name="menuitem" value="Pusheen Macarons"> Pusheen Macarons <br>
             Rating Between 1(terrible) to 5(amazing): <br>
             <input type="number" name="rating" min="1" max="5"> <br>
-            <input type="submit" value="Submit">
+			<input type="button"  value="Submit form" onclick = "moreInfo();">
           </form>
+		  <p id="more" class="inline-center" style="font-style: italic"> </p>
 	</div>
   </body>
 </html>
