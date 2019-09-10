@@ -53,7 +53,7 @@
                   </div>
                   <div class="container" style="background-color:#f1f1f1">
                     <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-                    <span class="psw">Forgot <a href="#">password?</a></span>
+                    <span class="psw">Forgot <a href="ForgotPassword.html">password?</a></span>
                   </div>
                 </form>
               </div>
@@ -129,70 +129,20 @@
 
     <!-- Feature 5: HTML Forms (input form see below) -->
     <!-- Feature 5:   (radio button see below) -->
-    <form>
-      <input type="radio" name="food" value="pizza" checked> pizza<br>
-      <input type="radio" name="food" value="burger"> burger<br>
-      <input type="radio" name="food" value="fries"> fries
-    </form>
+      <form>
+        <input type="radio" name="food" value="pizza" checked> pizza<br>
+        <input type="radio" name="food" value="burger"> burger<br>
+        <input type="radio" name="food" value="fries"> fries
+      </form>
 
-    <!-- Feature 5:   (target attribute see below) -->
-    <!-- Feature 5: (get method see below, get adds form data to url, don't use for sensitive info!) -->
-    <!-- Feature 5: (use post for sensitive data, not in url) -->
-    <form action="/action_page.php" method="post"></form>
-    <!-- Feature 5: (Grouping data with field set) -->
-    <form action="greg.html">
-      <fieldset>
-        <legend>Personal information:</legend>
-        First name:<br>
-        <input type="text" name="firstname" value="Mickey"><br>
-        Last name:<br>
-        <input type="text" name="lastname" value="Mouse"><br><br>
-        <input type="submit" value="Submit">
-      </fieldset>
-    </form>
-
-    <!-- Feature 7: Drag and Drop (see below)  -->
-    <script>
-      function allowDrop(ev) {
-        ev.preventDefault();
-      }
-
-      function drag(ev) {
-        ev.dataTransfer.setData("text", ev.target.id);
-      }
-
-      function drop(ev) {
-        ev.preventDefault();
-        var data = ev.dataTransfer.getData("text");
-        ev.target.appendChild(document.getElementById(data));
-      }
-    </script>
-
-    <!-- Drag and Drop Demo -->
-    <h2>Drag and Drop</h2>
-    <p>Drag the image back and forth between the two div elements.</p>
-
-    <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
-      <img
-        src="https://img.buzzfeed.com/thumbnailer-prod-us-east-1/dc23cd051d2249a5903d25faf8eeee4c/BFV36537_CC2017_2IngredintDough4Ways-FB.jpg"
-        draggable="true" ondragstart="drag(event)" id="drag1" width="88" height="31">
-    </div>
-
-    <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-
-    <!-- Feature 2: (address below) -->
-    <address>
-      <p>by John Doe.<br>
-        Visit us at:<br>
-        Example.com<br>
-        Box 564, Disneyland<br>
-        USA</p>
-    </address>
-
-    <!-- Feature 10: -->
-    <!-- Show the get vs post w3 article -->
-    <!-- https://www.w3schools.com/tags/ref_httpmethods.asp -->
+     <!-- Feature 2: (address below) -->
+      <address>
+        <p>by John Doe.<br>
+          Visit us at:<br>
+          Example.com<br>
+          Box 564, Disneyland<br>
+          USA</p>
+      </address>
     </div>
   </body>
-
 </html>
