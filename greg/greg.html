@@ -57,8 +57,8 @@
             <!--Feature 1 Attributes-->
             <!--Feature 2 Formating The sub the del-->
             <nav>
-                <ul id-="ul1">
-                    <li id="li1">
+                <ul id-="ul1" onclick="checkItem(pancakes)">
+                    <li id="li1" class="itemList">
                         <i>Pancakes </i><sub>$ 9.99</sub>
                         <p>
                             <span class="foodPic">
@@ -66,7 +66,7 @@
                             </span>
                         </p>
                     </li>
-                    <li id="li1">
+                    <li id="li1" class="itemList">
                         <i>Bacon Egg Cheese </i><sub>$ 5.99</sub>
                         <p>
                                 <span class="foodPic">
@@ -74,7 +74,7 @@
                                 </span>
                         </p>
                     </li>
-                    <li id="li1">
+                    <li id="li1" class="itemList">
                         <i>Omelete </i><sub>$ 9.99</sub>
                         <p>
                                 <span class="foodPic">
@@ -82,7 +82,7 @@
                                 </span>
                         </p>
                     </li>
-                    <li id="li1">
+                    <li id="li1" class="itemList">
                         <i>Tacos </i><sub>$ 7.99</sub>
                         <p>
                                 <span class="foodPic">
@@ -90,7 +90,7 @@
                                 </span>
                         </p>
                     </li>
-                    <li id="li1">
+                    <li id="li1" class="itemList">
                         <i><del>Burgers <sub>$ 12.99</sub></del></i>
                         <p>
                                 <span class="foodPic">
@@ -98,7 +98,7 @@
                                 </span>
                         </p>
                     </li>
-                    <li id="li1">
+                    <li id="li1" class="itemList">
                         <i>Milkshakes </i><sub>$ 4.50</sub>
                         <p>
                                 <span class="foodPic">
@@ -106,7 +106,7 @@
                                 </span>
                         </p>
                     </li>
-                    <li id="li1">
+                    <li id="li1" class="itemList">
                         <i>Buffalo Wings <sub>$ 10</sub></i>
                         <p>
                                 <span class="foodPic">
@@ -114,7 +114,7 @@
                                 </span>
                         </p>
                     </li>
-                    <li id="li1">
+                    <li id="li1" class="itemList">
                         <i><del>Baked Ziti <sub>$ 8.99</sub></del></i>
                         <p>
                                 <span class="foodPic">
@@ -122,7 +122,7 @@
                                 </span>
                         </p>
                     </li>
-                    <li id="li1">
+                    <li id="li1" class="itemList">
                         <i>Soda </i><sub>$ 1.25</sub>
                         <p>
                                 <span class="foodPic">
@@ -159,6 +159,27 @@
             var long = document.getElementById("longDelivid");
             lat.value = position.coords.latitude;
             long.value = position.coords.longitude;
+        }
+
+        function checkItem(aItem)
+        {
+            var cookieList = document.cookie.split(',');
+
+            for(i = 0; i < cookieList.length; i++)
+            {
+                if(cookieList[i] == aItem)
+                {
+                    delete cookieList[i];
+                }
+            }
+
+            document.cookie = cookieList;
+            checkCookies();
+        }
+
+        function checkCookies()
+        {
+            var cookieList = document.cookie.split(',');
         }
     </script>
 
