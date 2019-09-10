@@ -12,6 +12,8 @@
     <link rel="stylesheet" type="text/css" href="../TeamTemplate.css">
     <!-- Implements own external CSS file. -->
     <link rel="stylesheet" type="text/css" href="Omran_webpage.css">
+    <!-- Implements own external JS file. -->
+    <script type="text/javascript" src="Omran_webpage.js"></script>
 
 </head>
 
@@ -46,8 +48,10 @@
 The src attribute specifies the URL (web address) of the image. If a browser cannot find an image, it will display the value of the alt attribute. You can use the style attribute to specify the pixellated width and height of an image. -->
         <img src="https://i.imgur.com/wbI5iGK.jpg" alt="Roast Pork (Just Kidding! 2/3" width="600" height="1060">
         <!-- HTML Attribute Link: Hyperlinks are defined with the HTML <a> tag. The href attribute specifies the destination address (https://www.website.com/page/) of the link. -->
-        <p class="left-margin">This dish was originally made in the <a
-                href="https://shokugekinosoma.fandom.com/wiki/Roast_Pork,_Just_Kidding">Shokugeki</a> (Food War) series.
+        <p class="left-margin">
+            This dish was originally made in the Shokugeki (Food War) series.
+            <!-- Includes button that uses JS file functions. -->
+            <button id="demo" onclick="RecipeConf()">See source</button>
         </p>
         <!-- This is the ingredients list. It is unordered.-->
         <h2>Required Ingredients</h2>
@@ -63,7 +67,7 @@ The src attribute specifies the URL (web address) of the image. If a browser can
             <li>Butter. I suggest 2 tablespoons unsalted (30ml), but you could always use more.</li>
             <li>2 packs of thick-cut bacon.</li>
             <li>1 Cup, or 250ml of red wine. We use Pinot Noir as it's preferable for cooking.</li>
-            <li>1/4 Cup, or 60ml of sake. Any sake that is labeled as “sweet” such as mirin should do.</li>
+            <li>1/4 Cup, or 60ml of sake. Any sake that is labeled as "sweet" such as mirin should do.</li>
             <li>2 tbsp(s), or 30ml of soy sauce.</li>
             <li>1 sprig of parsley or any garnish.</li>
             <h2>Needed Cookware</h2>
