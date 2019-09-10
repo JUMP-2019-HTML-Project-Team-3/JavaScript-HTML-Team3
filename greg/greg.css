@@ -92,7 +92,7 @@ article:hover, aside:hover{
 	overflow: hidden;
 }
 
-#li1{
+.itemList{
 	height: 20px;
 	display: block;
 	text-align: center;
@@ -104,12 +104,12 @@ article:hover, aside:hover{
 	visibility: hidden;
 }
 
-#li1:hover .foodPic {
+.itemList:hover .foodPic {
 	height: 180px;
 	visibility: visible;
 }
 
-#li1:hover .foodPic img{
+.itemList:hover .foodPic img{
 	height: 150px;
 	width: auto;
 
@@ -117,7 +117,7 @@ article:hover, aside:hover{
 	transform: rotate(360deg);
 }
 
-#li1:hover{
+.itemList:hover{
 	height: 180px;
 }
 
