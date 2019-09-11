@@ -13,7 +13,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-<body onload="firstLoad();">
+<body onload="firstLoad()">
     <!-- NAV BAR HTML -->
             <nav class="bar">
               <ul>
@@ -27,7 +27,7 @@
                         <a id="rebeccaPage" class="navDropLinks" href="../Rebecca/RebeccaPage.html">Salki's Noms Cafe</a>
                       </div>
                   </div>
-                <div id="displayName" class="show"><script>getUserName();</script></div>
+                <div id="displayName" class="show"></div>
               </ul>
             </nav>
     <!-- NAV BAR END -->
@@ -156,6 +156,8 @@
     <script>
         function firstLoad()
         {
+            setLinksOthers();
+            
             document.getElementById("resetButton").innerHTML = drawReset();
 
             checkCookies();
@@ -163,23 +165,6 @@
             setLinks();
         }
 
-        function setLinks()
-        {
-            var parameters = location.search.split("?");
-            document.getElementById("displayName").innerText = parameters[1];
-            
-            var join = "../Index/Index.html?" + parameters[1];
-            document.getElementById("indexPage").href = join;
-
-            var join = "#?" + parameters[1];
-            document.getElementById("gregPage").href = join;
-
-            var join = "../Omran/Omran_webpage.html?" + parameters[1];
-            document.getElementById("omranPage").href = join;
-
-            var join = "../Rebecca/RebeccaPage.html?" + parameters[1];
-            document.getElementById("rebeccaPage").href = join;
-        }
 
         function getLocation()
         {

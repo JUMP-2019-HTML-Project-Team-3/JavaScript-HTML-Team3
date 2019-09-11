@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html>
    <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+   
 	<link rel="stylesheet" type="text/css" href="../TeamTemplate.css">
     <link rel="stylesheet" type="text/css" href="RebeccaPage.css">
 	<script type="text/javascript" src="RebeccaPage.js"></script>
-	
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-
       <title>Salki's Noms</title>
   </head>
   <body onload="checkCookie()">
@@ -51,7 +53,7 @@
     <hr>
 	<h1 id="special" class="inline-center"> Special Events</h1>
 	
-	<p> <img class="float-image resize-image" src="cafeimages/catcafe.jpeg" alt="Cat Cafe Promo"> On November 10, consider dropping by to meet some feline friends who will be roaming the cafe all day!
+	<p> <img class="float-image resize-image rounded-circle" src="cafeimages/catcafe.jpeg" alt="Cat Cafe Promo"> On November 10, consider dropping by to meet some feline friends who will be roaming the cafe all day!
 	</p>
 	
 	<br>
@@ -64,45 +66,46 @@
 	<hr>
 
     <h1 id="menu" class = "inline-center"> Menu </h1>
-	
-    <table  class="table table-responsive" style="width:100%">
+	<div class="table-responsive">
+    <table class ="table" style="width:100%">
             <tr>
-              <th>Name</th>
-              <th>Description</th> 
-              <th>Picture</th>
-              <th>Price</th>
+              <th class="text-center">Name</th>
+              <th class="text-center">Description</th> 
+              <th class="text-center">Picture</th>
+              <th class="text-center">Price</th>
             </tr>
             <tr>
               <td>Cat Cookies</td>
               <td>Cat-shaped cookies with icing topping</td>
-              <td><img class = "resize-image inline-image-center"   src = "cafeimages/cookies.jpg" alt="Cat Cookies"></td>
+              <td><img class = "resize-image inline-image-center rounded"   src = "cafeimages/cookies.jpg" alt="Cat Cookies"></td>
               <td>$3.00 for 5</td>
             </tr>
             <tr>
               <td>Rainbow Waffles</td>
               <td>Stack of seven waffles in good ol' ROYGBIV</td>
-              <td><img class = "resize-image inline-image-center"  src = "cafeimages/rainbowwaffle2.jpg" alt="Bear Waffles"></td>
+              <td><img class = "resize-image inline-image-center rounded"  src = "cafeimages/rainbowwaffle2.jpg" alt="Bear Waffles"></td>
               <td>$5.00</td>
             </tr>
             <tr>
               <td>Mini Breakfast</td>
               <td>For when someone just wants a 'little' breakfast; bacon and eggs</td>
-              <td><img class = "resize-image inline-image-center"  src = "cafeimages/baconeggs.jpg" alt="Mini Breakfast"></td>
+              <td><img class = "resize-image inline-image-center rounded"  src = "cafeimages/baconeggs.jpg" alt="Mini Breakfast"></td>
               <td>$3.00</td>
             </tr>
             <tr>
                 <td>Bear Sundae</td>
                 <td>Hot fudge sundae with oreo-cookie ears and a chocolate drizzle face</td>
-                <td><img class = "resize-image inline-image-center"  src = "cafeimages/bearsundae.jpg" alt="Bear Sundae"></td>
+                <td><img class = "resize-image inline-image-center rounded"  src = "cafeimages/bearsundae.jpg" alt="Bear Sundae"></td>
                 <td>$7.50</td>
             </tr>
             <tr>
               <td>Pusheen Macarons</td>
               <td>Limited Time Only: delicious macarons inspired by Pusheen!</td>
-              <td><img class = "resize-image inline-image-center"  src = "cafeimages/pusheen.jpg" alt="Pusheen Macarons" ></td>
+              <td><img class = "resize-image inline-image-center rounded"  src = "cafeimages/pusheen.jpg" alt="Pusheen Macarons" ></td>
               <td>$10.00 for 12</td>
           </tr>
           </table>
+	</div>
 	<hr>
 	<div class = "inline-center"> <a class ="format-links" href = "https://pusheen.com">Visit Pusheen Here!</a> </div>
 	<hr>
