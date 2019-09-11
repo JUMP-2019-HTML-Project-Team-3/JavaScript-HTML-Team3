@@ -2,9 +2,10 @@
 <html>
    <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
   <script src="../Session.js"></script>
 
@@ -44,6 +45,9 @@
     <hr>
 
     <p class = "inline-center">Come on down to Salki's Noms to get some food!</p>
+	
+	<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#video-collapse" aria-expanded="false" aria-controls="video-collapse">View Video</button>
+	<div id="video-collapse" class="collapse">
 	<div class="embed-responsive embed-responsive-4by3">
     <iframe class = "inline-image-center embed-responsive-item" width="560" height="315" style = "margin-left: 15px;
 	margin-right: 15px;" src="https://www.youtube.com/embed/5FKw7-SC7VI" 
@@ -51,6 +55,7 @@
         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
         allowfullscreen>
     </iframe>
+	</div>
 	</div>
     <hr>
 	<h1 id="special" class="inline-center"> Special Events</h1>
@@ -125,7 +130,7 @@
             <input type="radio" name="menuitem" value="Pusheen Macarons"> Pusheen Macarons <br>
             Rating Between 1(terrible) to 5(amazing): <br>
             <input type="number" name="rating" min="1" max="5"> <br>
-			<input type="button"  value="Submit form" onclick = "moreInfo();">
+			<input type="button" class = "btn btn-primary" value="Submit Form" onclick = "moreInfo();">
           </form>
 		  <p id="more" class="inline-center" style="font-style: italic"> </p>
 	</div>
