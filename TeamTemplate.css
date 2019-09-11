@@ -16,6 +16,15 @@
     padding-right: 5%;
     position: relative;
   }
+  /* Show Login name When Logged In */
+  div.hidden{
+    display: none;
+  }
+  div.show{
+    display:inline-block;
+    padding-left: 50%;
+    position: relative;
+  }
 
 	/* NAVBAR LINK SETTINGS */
 	.navDropLinks:link {
