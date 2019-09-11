@@ -5,7 +5,8 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="../Session.js"></script>
 
    
 	<link rel="stylesheet" type="text/css" href="../TeamTemplate.css">
@@ -18,15 +19,16 @@
         <nav class="bar">
           <ul>
             <h1 class="left">Look at Our Restaurants!.com</h1>
-            <li><a class="navDropLinks" href="../Index/Index.html">Home</a>
+            <li><a id="indexPage" class="navDropLinks" href="../Index/Index.html">Home</a>
               <div class="dropdown">
                   <button class="dropbtn" id="navblock">Our Foodie's Pages</button>
                   <div class="dropdown-content">
-                    <a class="navDropLinks" href="../greg/greg.html">Greg's Page</a>
-                    <a class="navDropLinks" href="../Omran/Omran_webpage.html">Chef Recipe</a>
-                    <a class="navDropLinks" href="#">Salki's Noms Cafe</a>
+                    <a id="gregPage" class="navDropLinks" href="../greg/greg.html">Greg's Page</a>
+                    <a id="omranPage" class="navDropLinks" href="../Omran/Omran_webpage.html">Chef Recipe</a>
+                    <a id="rebeccaPage" class="navDropLinks" href="#">Salki's Noms Cafe</a>
                   </div>
               </div>
+            <div id="displayName" class="show"></div>
           </ul>
         </nav>
 <!-- NAV BAR END -->

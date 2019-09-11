@@ -34,7 +34,7 @@ function setLinksIndex()
     if (sessionUser != "") {
         var parameters = location.search.split("?");
         if(parameters != null){
-            document.getElementById("displayName").innerText = "Welcome " + sessionUser;
+            document.getElementById("displayName").innerHTML = "Welcome" + "&emsp;" + sessionUser;
             
             var join = "../Index/Index.html?" + sessionUser;
             document.getElementById("indexPage").href = join;
@@ -56,7 +56,7 @@ function setLinksOthers()
     var parameters = location.search.split("?");
 
     if(parameters[1] != undefined){
-        document.getElementById("displayName").innerText = parameters[1];
+        document.getElementById("displayName").innerHTML = "Logged in as:" + "&emsp;"+ parameters[1];
         
         var join = "../Index/Index.html?" + parameters[1];
         document.getElementById("indexPage").href = join;
