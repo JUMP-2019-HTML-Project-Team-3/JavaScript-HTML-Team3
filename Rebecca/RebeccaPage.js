@@ -43,10 +43,10 @@ function checkCookie()
         {
           var user = accessCookie("testCookie");
           if (user!="")
-        	alert("Welcome Back " + user + "!!!");
+        	alert("Welcome Back " + user + "! Ready for your favorite treat?");
           else
           {
-            user = prompt("Please enter your name");
+            user = prompt("Hello! This seems to be your first time here. Please enter your name");
             num = prompt("How many days you want to store your name on your computer?");
             if (user!="" && user!=null)
             {
