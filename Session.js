@@ -14,12 +14,6 @@ function newLoad(){
     catch(err){}
 }
 
-function getUserName(){
-    var stringCookie = document.cookie.split(";");
-    sessionUser = stringCookie[0];
-    return sessionUser;
-}
-
 function User(userName, password){
     this.userName = userName;
     this.password = password;
