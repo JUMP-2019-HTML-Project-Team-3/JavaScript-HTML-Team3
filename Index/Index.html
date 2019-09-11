@@ -15,19 +15,20 @@
     <script src="../Session.js"></script>
   </head>
 
-  <body onload="newLoad()">
+  <body onload="setLinksIndex();">
     <!-- NAV BAR HTML -->
       <nav class="bar">
         <ul>
           <h1 class="left">Look at Our Restaurants!.com</h1>
-          <li>Home
+          <li><a id="indexPage" href="#">Home</a>
             <!-- Dropdown to Foodie Pages Links -->
             <div class="dropdown">
                 <button class="dropbtn">Our Foodie's Pages</button>
                 <div class="dropdown-content">
-                  <a class="navDropLinks" href="../greg/greg.html">Greg's Page</a>
-                  <a class="navDropLinks" href="../Omran/Omran_webpage.html">Chef Recipe</a>
-                  <a class="navDropLinks" href="../Rebecca/RebeccaPage.html">Salki's Noms Cafe</a>
+                  <script>setLinks();</script>
+                  <a id="gregPage" class="navDropLinks" href="../greg/greg.html">Greg's Page</a>
+                  <a id="omranPage" class="navDropLinks" href="../Omran/Omran_webpage.html">Chef Recipe</a>
+                  <a id="rebeccaPage" class="navDropLinks" href="../Rebecca/RebeccaPage.html">Salki's Noms Cafe</a>
                 </div>
             </div>
             <!-- End Dropdown -->
