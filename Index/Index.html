@@ -15,7 +15,7 @@
     <script src="../Session.js"></script>
   </head>
 
-  <body>
+  <body onload="newLoad()">
     <!-- NAV BAR HTML -->
       <nav class="bar">
         <ul>
@@ -31,12 +31,15 @@
                 </div>
             </div>
             <!-- End Dropdown -->
+            <!-- Display login user name if logged in -->
+            <div id="displayName" class="show"></div>
             <!-- Login Button Pop Up -->
             <div class="right"><button class="login" onclick="document.getElementById('id01').style.display='block'" 
               style="width:auto;">Login</button>
             </div>
-            <div id="id01" class="modal" onshow="loginWindow()">
-                <form class="modal-content animate" method="POST">
+          </li>
+            <div id="id01" class="modal">
+                <form class="modal-content animate">
                   <div class="imgcontainer">
                     <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
                     <img src="matthew_images/Logo.jpg" alt="Avatar" class="avatar">
@@ -48,7 +51,7 @@
               
                     <label for="psw"><b>Password</b></label>
                     <input id="pID" type="password" placeholder="Enter Password" name="psw" required>
-                      
+                    <script src="../Session.js"></script>  
                     <button id="sb1" class="submit" type="submit" onclick="checkUser()">Login</button>
                     
                     <label>

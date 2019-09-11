@@ -1,53 +1,52 @@
 // Viewbag, User Check, Session tokens
-var users = [];
 
-var Viewbag = {
-    user : null,
-    SessionID : 0,
+function newLoad(){
+    try{
+        var stringCookie = document.cookie.split(";");
 
-    constructor(User){
-        this.SessionID = Math.floor(Math.random() * 1000) + 1;
-        this.user = User;
+        sessionUser = stringCookie[0];
+        sessionPass = stringCookie[1];
+        if(sessionUser != ""){
+            document.getElementById("displayName").innerHTML = "Welcome " + sessionUser;
+        }
     }
+    catch(err){}
 }
 
-var User = {
-    userName : "",
-    password : "",
-
-    constructor(userName, password){
-        this.userName = userName;
-        this.password = password;
-
-        if(!users.includes(this.userName)){
-            users.push(this);
-        }
-        else{
-            return alert("User name is taken")
-        }
-    }
+function User(userName, password){
+    this.userName = userName;
+    this.password = password;
 }
 
 function checkUser(){
     var check = document.getElementById("sb1");
     var tryUser = document.getElementById("uID").value;
     var tryPass = document.getElementById("pID").value;
-    var testUser = users.find(tryUser);
+    var userList = document.cookie.split(";");
+    var userCheck = "";
+
+    for (let i = 0; i < userList.length; i+=2) {
+
+        if (userList[i] == tryUser) {
+            userCheck = array[i];
+        }
+    }
     
-    return onclick = function(event){
-        if(event.target == check){
-            if(testUser){
+    //  onclick = function(event){
+        // if(event.target == check){
+            if(userCheck != ""){
                 if(testUser.password == tryPass){
-                    alert("Login Successful");
-                    return new Viewbag(userName);
+                    this.alert("Login Successful");
                 }
                 else{
-                    return alert("Incorrect Password");
+                    this.alert("Incorrect Password");
                     }
             }
             else{
-                return new User(userName, password);
+                var newUser = new User(tryUser, tryPass);
+                this.alert("Login Successful: Welcome new user");
+                document.cookie += newUser.userName + ";" + newUser.password + ";";                
             }
-        }
-    }
+        // }
+    // }
 }
