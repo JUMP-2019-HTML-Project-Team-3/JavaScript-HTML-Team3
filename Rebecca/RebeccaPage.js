@@ -41,6 +41,7 @@ function accessCookie(cookieName)
 //If cookie doesn't exist then it prompts the user for input, if input is valid then it will run the createCookie() function
 function checkCookie()
         {
+          setLinksOthers();
           var user = accessCookie("testCookie");
           if (user!="")
         	alert("Welcome Back " + user + "! Ready for your favorite treat?");
