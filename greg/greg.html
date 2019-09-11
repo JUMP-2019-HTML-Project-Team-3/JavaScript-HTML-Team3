@@ -11,21 +11,21 @@
 <!--Layout (Flex box Layout)-->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<body onload="firstLoad(); newLoad();">
+<body onload="firstLoad();">
     <!-- NAV BAR HTML -->
             <nav class="bar">
               <ul>
                 <h1 class="left">Look at Our Restaurants!.com</h1>
-                <li><a class="navDropLinks" href="../Index/Index.html">Home</a>
+                <li><a class="navDropLinks" id="indexPage" href="../Index/Index.html">Home</a>
                   <div class="dropdown">
                       <button class="dropbtn" id="navblock">Our Foodie's Pages</button>
                       <div class="dropdown-content">
-                        <a class="navDropLinks" href="#">Greg's Page</a>
-                        <a class="navDropLinks" href="../Omran/Omran_webpage.html">Chef Recipe</a>
-                        <a class="navDropLinks" href="../Rebecca/RebeccaPage.html">Salki's Noms Cafe</a>
+                        <a id="gregPage" class="navDropLinks" href="#">Greg's Page</a>
+                        <a id="omranPage" class="navDropLinks" href="../Omran/Omran_webpage.html">Chef Recipe</a>
+                        <a id="rebeccaPage" class="navDropLinks" href="../Rebecca/RebeccaPage.html">Salki's Noms Cafe</a>
                       </div>
                   </div>
-                <div id="displayName" class="show"></div>
+                <div id="displayName" class="show"><script>getUserName();</script></div>
               </ul>
             </nav>
     <!-- NAV BAR END -->
@@ -157,6 +157,26 @@
             document.getElementById("resetButton").innerHTML = drawReset();
 
             checkCookies();
+
+            setLinks();
+        }
+
+        function setLinks()
+        {
+            var parameters = location.search.split("?");
+            document.getElementById("displayName").innerText = parameters[1];
+            
+            var join = "../Index/Index.html?" + parameters[1];
+            document.getElementById("indexPage").href = join;
+
+            var join = "#?" + parameters[1];
+            document.getElementById("gregPage").href = join;
+
+            var join = "../Omran/Omran_webpage.html?" + parameters[1];
+            document.getElementById("omranPage").href = join;
+
+            var join = "../Rebecca/RebeccaPage.html?" + parameters[1];
+            document.getElementById("rebeccaPage").href = join;
         }
 
         function getLocation()
