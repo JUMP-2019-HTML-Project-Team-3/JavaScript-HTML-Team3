@@ -39,6 +39,10 @@
 	margin-right: 15px;
 }
 
+.video-collapse.in {
+    display: block !important;
+}
+
 canvas {
     padding-left: 0;
     padding-right: 0;
@@ -48,8 +52,26 @@ canvas {
 
 }
 
+hr { 
+  display: block;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  margin-left: 15px;
+  margin-right: 15px;
+  border-style: groove;
+  border-color: MediumSpringGreen;
+  border-width: 5px;
+
+} 
+
+
 table, th, td {
    border: 1px solid black;
+}
+
+table {
+	margin-left: 15px;
+	margin-right: 15px;
 }
 
 th {
