@@ -11,7 +11,7 @@ function domloaded(){
 
     ctx.strokeStyle = gradient;
     ctx.strokeText("Salki's Noms",10,50);
-
+}
 
 //Creates a cookie by asking for username, then how long the cookie should exist in your machine
 function createCookie(cookieName,cookieValue,daysToExpire)
@@ -20,6 +20,7 @@ function createCookie(cookieName,cookieValue,daysToExpire)
           date.setTime(date.getTime()+(daysToExpire*24*60*60*1000));
           document.cookie = cookieName + "=" + cookieValue + "; expires=" + date.toGMTString();
         }
+		
 		
 //Function to return the content of the cookie
 function accessCookie(cookieName)
@@ -34,6 +35,7 @@ function accessCookie(cookieName)
        	  }
         	return "";
         }
+		
 //Function run to check cookie
 //If cookie exists it uses the accessCookie() function to get cookie information and alert the user.
 //If cookie doesn't exist then it prompts the user for input, if input is valid then it will run the createCookie() function
@@ -52,8 +54,7 @@ function checkCookie()
             }
           }
         }
-		
-//Prompts user for additonal information before changing text on the page in response to their input in the prompt
+//Prompts user for additonal information before changing text on the page in response to their input in the prompt		
 function moreInfo() {
   var txt;
   var more = prompt("Anything else you'd like to tell us? Here's your chance!");
@@ -63,7 +64,6 @@ function moreInfo() {
     txt = "Thank you for giving more details!";
   }
   document.getElementById("more").innerHTML = txt;
-  
   //Defines a var with the value of the 'nickname' item in the "review" form
   var name = document.getElementById("review").elements[0].value;
   //Lines 70-81: Defines a var with the value of the 'menuitem' item in the "review form"
@@ -82,5 +82,6 @@ function moreInfo() {
   }
   //Defines a var with the value of the 'rating' item in the "review" form
   var rating = document.getElementById("review").elements[6].value;
+
   alert("The form was submitted! Thank you " + name + " for giving " + item + " a rating of " + rating + "!");
 }
