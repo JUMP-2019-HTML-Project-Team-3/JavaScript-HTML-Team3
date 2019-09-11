@@ -7,6 +7,7 @@
     font-weight: bolder !important;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif !important;
     font-size: large !important;
+    box-shadow:inset 3px 3px 3px 3px rgba(255, 255, 255, 0.5);
     border-radius: 5px/5px;
   }
   /* Set Login Button right */
@@ -94,8 +95,9 @@
 	
 	/* Creates border */
 	.outer-box-frame {
-    border: 1rem solid #2b506e;
+    border:  1rem solid rgba(43, 80, 110, 1);
     border-radius: 5px/5px;
+    /* #2b506e */
 	}
 
 	/* Sets background color */
