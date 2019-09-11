@@ -10,7 +10,7 @@
 <!--Layout (Flex box Layout)-->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<body onload="checkCookies()">
+<body onload="firstLoad()">
     <!-- NAV BAR HTML -->
             <nav class="bar">
               <ul>
@@ -29,7 +29,7 @@
     <!-- NAV BAR END -->
 
     <div class="outer-box-frame">
-    <span class="topSpan"><p class="TopFont"><b>Order Food</b></p></span>
+    <span class="topSpan"><p class="TopFont"><b id="orderTitle">Order Food</b></p></span>
     <section>
         <aside>
             <p>
@@ -52,8 +52,7 @@
                 </svg>
             </p>
             <p>
-                <div style="float: left; width: 50%;" onclick="resetItems()">
-                    Reset Order
+                <div id="resetButton" style="float: left; width: 50%;" onclick="resetItems()">
                 </div>
                 <div id="total" style="float: right; width: 50%;">
                     Total: 0
@@ -144,17 +143,24 @@
         </article>
     </section>
     <footer>
-        <p>
-            Contact Us
-        </p>
+        <p>Contact Us</p>
     </footer>
     </div>
 </body>
 
     <!--Feature 8 Geolocation-->
     <script>
-        var x = document.getElementById("demo");
-        function getLocation() {
+        function firstLoad()
+        {
+            document.getElementById("resetButton").innerHTML = drawReset();
+
+            checkCookies();
+        }
+
+        function getLocation()
+        {
+            var x = document.getElementById("demo");
+
             if (navigator.geolocation) {
                 navigator.geolocation.getCurrentPosition(showPosition);
             } else {
@@ -254,6 +260,19 @@
             }
             
             document.getElementById("total").innerHTML = "<p>Total: $" + total.toFixed(2) + "</p>";
+        }
+
+        function drawReset()
+        {
+            var drawString = "";
+
+            drawString += '<svg>';
+            drawString += '<circle  cx="35" cy="40" r="30" stroke="black" stroke-width="4" fill="red" />';
+            drawString += '<text fill="yellow" font-size="17" x="15" y="35">Reset</text>';
+            drawString += '<text fill="yellow" font-size="17" x="15" y="55">Order</text>';
+            drawString += '</svg>';
+
+            return drawString;
         }
     </script>
 
