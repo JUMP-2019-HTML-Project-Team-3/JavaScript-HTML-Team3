@@ -39,9 +39,12 @@
 	margin-right: 15px;
 }
 
-.video-collapse.in {
+.video-collapse {
     display: block !important;
+	margin-left: auto;
+	margin-right: auto;
 }
+
 
 canvas {
     padding-left: 0;
