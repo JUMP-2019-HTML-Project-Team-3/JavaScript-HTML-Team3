@@ -1,19 +1,5 @@
 // Viewbag, User Check, Session tokens
 
-function newLoad(){
-    try{
-        var stringCookie = document.cookie.split(";");
-
-        sessionUser = stringCookie[0];
-        sessionPass = stringCookie[1];
-        const sessionUser = sessionStorage.getItem("userName");
-        if(sessionUser != ""){
-            document.getElementById("displayName").innerHTML = "Welcome " + sessionUser;
-        }
-    }
-    catch(err){}
-}
-
 function User(userName, password){
     this.userName = userName;
     this.password = password;
@@ -21,11 +7,20 @@ function User(userName, password){
 
 function setLinksIndex()
 {
-    var stringCookie = document.cookie.split(";");
-
-    sessionUser = stringCookie[0];
-    sessionPass = stringCookie[1];
-    if (sessionUser != "") {
+    //var stringCookie = document.cookie.split(";");
+    var sessionUser = sessionStorage.getItem("user");
+    var sessionPass = sessionStorage.getItem("password");   
+    //sessionUser = stringCookie[0];
+    //sessionPass = stringCookie[1];
+    if (sessionUser != null) {
+        var newButton = document.getElementById("log");
+        newButton.className ="logout show";
+        newButton.innerHTML = "Logout";
+        // newButton.setAttribute("onclick","");
+        // newButton.setAttribute("href", "#");
+        newButton.onclick=logout;
+        //document.getElementById("log").removeEventListener(onclick);
+        
         var parameters = location.search.split("?");
         if(parameters != null){
             document.getElementById("displayName").innerHTML = "Welcome" + "&emsp;" + sessionUser;
@@ -66,33 +61,28 @@ function setLinksOthers()
     }
 }
 
-
-
 function checkUser(){
-    var check = document.getElementById("sb1");
+    document.getElementById("sb1");
     var tryUser = document.getElementById("uID").value;
     var tryPass = document.getElementById("pID").value;
-    var userList = document.cookie.split(";");
-    var userCheck = "";
+    //var userList = document.cookie.split(";");
+    
+    //var newUser = new User(tryUser, tryPass);
+    this.alert("Login Successful: Welcome new user");
+    sessionStorage.setItem("user", tryUser);
+    sessionStorage.setItem("password", tryPass);
+    //document.cookie = newUser.userName + ";" + newUser.password + ";";                
+    
+}
 
-    for (let i = 0; i < userList.length; i+=2) {
+function logout(){
 
-        if (userList[i] == tryUser) {
-            userCheck = array[i];
-        }
-    }
-    if(userCheck != ""){
-        if(testUser.password == tryPass){
-            this.alert("Login Successful");
-        }
-        else{
-            this.alert("Incorrect Password");
-            }
+    sure = confirm("Are you sure you want to logout?");
+    if(sure){
+        sessionStorage.clear();
+        location.reload();
     }
     else{
-        var newUser = new User(tryUser, tryPass);
-        this.alert("Login Successful: Welcome new user");
-        sessionStorage.setItem("userName", tryUser);
-        document.cookie = newUser.userName + ";" + newUser.password + ";";                
+        return;
     }
 }
