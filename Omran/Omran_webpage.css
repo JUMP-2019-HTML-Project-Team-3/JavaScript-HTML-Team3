@@ -1,4 +1,4 @@
-	.stages {
+	.stages-1 {
 		background-color: #bf3434;
 		color: white;
 		font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -6,6 +6,39 @@
 		margin: 20px;
 		padding: 20px;
 	}
+	.stages-2 {
+		background-color: #c44439;
+		color: white;
+		font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+		text-align: center;
+		margin: 20px;
+		padding: 20px;
+	}
+	.stages-3 {
+		background-color: #c8533e;
+		color: white;
+		font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+		text-align: center;
+		margin: 20px;
+		padding: 20px;
+	}
+	.stages-4 {
+		background-color: #cc6244;
+		color: white;
+		font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+		text-align: center;
+		margin: 20px;
+		padding: 20px;
+	}
+	.stages-5 {
+		background-color: #d17249;
+		color: white;
+		font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+		text-align: center;
+		margin: 20px;
+		padding: 20px;
+	}
+
 
 	.left-margin {
 		margin-left: 20px;
