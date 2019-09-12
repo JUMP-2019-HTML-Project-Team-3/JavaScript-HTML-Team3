@@ -40,7 +40,7 @@ function accessCookie(cookieName)
 //If cookie exists it uses the accessCookie() function to get cookie information and alert the user.
 //If cookie doesn't exist then it prompts the user for input, if input is valid then it will run the createCookie() function
 function checkCookie()
-        {
+		{
           setLinksOthers();
           var user = accessCookie("testCookie");
           if (user!="")
@@ -52,9 +52,18 @@ function checkCookie()
             if (user!="" && user!=null)
             {
             createCookie("testCookie", user, num);
+			alert("Cookie created");
             }
           }
         }
+		
+function fillInForm(){
+	var user = accessCookie("testCookie");
+	if (user!="") {
+	document.review.nickname.value = user;
+	}
+}
+
 //Prompts user for additonal information before changing text on the page in response to their input in the prompt		
 function moreInfo() {
   var txt;

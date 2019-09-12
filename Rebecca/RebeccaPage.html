@@ -30,6 +30,9 @@
                   </div>
               </div>
             <div id="displayName" class="show"></div>
+            <div class="right">
+                <button id="log" class="logout hidden" onclick= "logout()">Logout</button>
+            </div>
           </ul>
         </nav>
 <!-- NAV BAR END -->
@@ -115,10 +118,12 @@
     <h1 class = "inline-center"> Leave a Review! </h1>
     <p class = "inline-center">If you've sampled any of our treats, please leave a review and tell us what you think!</p>
 	<div class = "container">
-    <form class = "inline-center" id = "review" >
+    <form class = "inline-center was-validated" id = "review" name = "review">
 			<div class="form-group">
             Nickname:<br>
-            <input class="form-control form-control-inline" type="text" name="nickname">
+            <input onclick = "fillInForm()" class="form-control form-control-inline" type="text" name="nickname" required>
+				<div class="valid-feedback">Valid.</div>
+				<div class="invalid-feedback">Who are you?</div>
 			</div>
 			<div class="form-group">
             What Did You Try?<br>
@@ -126,11 +131,12 @@
             <input class="form-check-input" type="radio" name="menuitem" value="Rainbow Waffles"> Rainbow Waffles <br>
             <input class="form-check-input" type="radio" name="menuitem" value="Mini Breakfast"> Mini Breakfast <br>
             <input class="form-check-input" type="radio" name="menuitem" value="Bear Sundae"> Bear Sundae <br>
-            <input class="form-check-input" type="radio" name="menuitem" value="Pusheen Macarons"> Pusheen Macarons
 			</div>
-			<div class="form-group">
+			<div class="form-group" required>
             Rating Between 1(terrible) to 5(amazing): <br>
-            <input class="form-control form-control-inline" type="number" name="rating" min="1" max="5">
+            <input class="form-control form-control-inline" type="number" name="rating" min="1" max="5" required>
+			<div class="valid-feedback">Valid.</div>
+			<div class="invalid-feedback">Let us know how it was!</div>
 			</div>
 			<input type="button" class = "btn btn-primary" value="Submit Form" onclick = "moreInfo();">
           </form>
