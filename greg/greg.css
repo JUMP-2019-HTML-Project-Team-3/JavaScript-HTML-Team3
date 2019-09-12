@@ -1,8 +1,4 @@
-.topSpan{
-	text-align: center;
-}
-
-.TopFont, .topSpan{
+.TopFont{
 	font-size: 20pt;
 }
 
@@ -26,63 +22,11 @@
 	to {font-size: 100pt;}
 }
 
-section {
-	display: -webkit-flex;
-	display: flex;
-}
-
-footer {
-	padding-top: 20px;
-	padding-bottom: 20px;
-	text-align: center;
-}
-
-aside {
-	border: 2px solid black;
-	border-right: none;
-	-webkit-flex: 0;
-	-ms-flex: 0;
-	flex: 0;
-	float: left;
-	padding-top: 5%;
-	padding-left: 5%;
-	padding-right: 5%;
-	width: 30%;
-}
-
 img{
 	width: auto;
 	height: 15px;
 	-webkit-transition: width 1s, height 1s, -webkit-transform 1s;
 	transition: width 1s, height 1s, transform 1s;
-}
-
-article {
-	border: 2px solid black;
-	-webkit-flex: 3;
-	-ms-flex: 3;
-	flex: 3;
-	float: right;
-	width: 70%;
-}
-
-article:hover, aside:hover{
-	-webkit-animation-name: changeBorder;
-	-webkit-animation-duration: 1s;
-	-webkit-animation-iteration-count: infinite;
-	animation-name: changeBorder;
-	animation-duration: 1s;
-	animation-iteration-count: infinite;
-}
-
-@-webkit-keyframes changeBorder{
-	from {border: 2xp solid red;}
-	to {border: 4px solid rgb(78, 255, 255); }
-}
-
-@keyframes changeBorder{
-	from {border: 2xp solid red;}
-	to {border: 4px solid rgb(78, 255, 255); }
 }
 
 #ul1 {
@@ -93,7 +37,8 @@ article:hover, aside:hover{
 }
 
 .itemList{
-	height: 20px;
+	border: 0;
+	height: 50px;
 	display: block;
 	text-align: center;
 	padding: 14px 16px;
@@ -105,7 +50,6 @@ article:hover, aside:hover{
 }
 
 .itemList:hover .foodPic {
-	height: 180px;
 	visibility: visible;
 }
 
@@ -118,7 +62,7 @@ article:hover, aside:hover{
 }
 
 .itemList:hover{
-	height: 180px;
+	height: 200px;
 }
 
 .circleHov:hover{
