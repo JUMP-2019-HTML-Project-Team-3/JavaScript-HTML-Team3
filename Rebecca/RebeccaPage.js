@@ -45,7 +45,6 @@ function checkCookie()
           var user = accessCookie("testCookie");
           if (user!="")
         	alert("Welcome Back " + user + "! Ready for your favorite treat?");
-			//fillInForm(user);
           else
           {
             user = prompt("Hello! This seems to be your first time here. Please enter your name");
@@ -54,14 +53,15 @@ function checkCookie()
             {
             createCookie("testCookie", user, num);
 			alert("Cookie created");
-			//document.review.nickname.value = user;
-
             }
           }
         }
 		
-function fillInForm(cookieName, user, num){
-	
+function fillInForm(){
+	var user = accessCookie("testCookie");
+	if (user!="") {
+	document.review.nickname.value = user;
+	}
 }
 
 //Prompts user for additonal information before changing text on the page in response to their input in the prompt		
