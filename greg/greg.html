@@ -1,28 +1,30 @@
 <!DOCTYPE html>
 <html>
+
 <link rel="stylesheet" href="greg.css">
 <link rel="stylesheet" href="../TeamTemplate.css">
 <script src="../Session.js"></script>
 
 <head>
-    <meta charset="utf-8"/>
+<meta charset="utf-8"/>
 </head>
 
 <!--Layout (Flex box Layout)-->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<body onload="firstLoad(); newLoad();">
+
+<body onload="firstLoad()">
     <!-- NAV BAR HTML -->
             <nav class="bar">
               <ul>
                 <h1 class="left">Look at Our Restaurants!.com</h1>
-                <li><a class="navDropLinks" href="../Index/Index.html">Home</a>
+                <li><a class="navDropLinks" id="indexPage" href="../Index/Index.html">Home</a>
                   <div class="dropdown">
                       <button class="dropbtn" id="navblock">Our Foodie's Pages</button>
                       <div class="dropdown-content">
-                        <a class="navDropLinks" href="#">Greg's Page</a>
-                        <a class="navDropLinks" href="../Omran/Omran_webpage.html">Chef Recipe</a>
-                        <a class="navDropLinks" href="../Rebecca/RebeccaPage.html">Salki's Noms Cafe</a>
+                        <a id="gregPage" class="navDropLinks" href="#">Greg's Page</a>
+                        <a id="omranPage" class="navDropLinks" href="../Omran/Omran_webpage.html">Chef Recipe</a>
+                        <a id="rebeccaPage" class="navDropLinks" href="../Rebecca/RebeccaPage.html">Salki's Noms Cafe</a>
                       </div>
                   </div>
                 <div id="displayName" class="show"></div>
@@ -154,10 +156,15 @@
     <script>
         function firstLoad()
         {
+            setLinksOthers();
+            
             document.getElementById("resetButton").innerHTML = drawReset();
 
             checkCookies();
+
+            setLinks();
         }
+
 
         function getLocation()
         {
