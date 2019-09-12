@@ -16,8 +16,7 @@
 </head>
 
 <body onload="firstLoad()">
-    <!-- NAV BAR HTML -->
-            <nav class="bar row">
+            <nav class="bar" style="margin-left: 7px; margin-right: 7px; margin-top: 7px;">
               <ul>
                 <h1 class="left">Look at Our Restaurants!.com</h1>
                 <li><a class="navDropLinks" id="indexPage" href="../Index/Index.html">Home</a>
@@ -32,9 +31,8 @@
                 <div id="displayName" class="show"></div>
               </ul>
             </nav>
-    <!-- NAV BAR END -->
 
-    <div class="outer-box-frame">
+    <div class="outer-box-frame" style="margin-left: 7px; margin-right: 7px;">
 
     <div class="container">
         <div class="col-sm-12">
@@ -45,7 +43,6 @@
     <div class="row">
         <div style="padding-left: 20px; margin-right: 25px;" class="col-sm-2 container">
             <div class="row" style="padding-left: 20px;">
-                <!--Feature 7 Forms-->
                 <form>
                     <div class="input-group mb-2">
                         <div class="input-group-prepend">
@@ -75,8 +72,6 @@
 
             <div class="row">
                 <div class="col-sm-12" align="center">
-                    <!--Feature 9 SVG Scalable Vector Graphics-->
-                    <!--Feature 10 OnClick Event-->
                     <svg width="100" height="100" onclick="getLocation()">
                         <circle  class="circleHov" cx="50" cy="50" r="40" stroke="black" stroke-width="4" fill="lightblue" />
                         <text fill="yellow" font-size="16" font-family="Verdana" x="16" y="55">Location</text>
@@ -98,16 +93,13 @@
         </div>
 
         <div class="col-sm-10" style="margin-left: -25px;">
-            <!--Feature 4 Lists-->
-            <!--Feature 1 Attributes-->
-            <!--Feature 2 Formating The sub the del-->
             <nav>
                 <ul id-="ul1" style="padding-right: 40px; padding-left: 40px;">
                     <li id="lipancakes" class="list-group-item itemList bg-transparent" onclick="checkItem('pancakes')">
                         <i>Pancakes </i><sub>$ </sub><sub id="subpancakes">9.99</sub>
                         <p>
                             <span class="foodPic">
-                                <img src="gregpics/pancakes.jpg">
+                                <img src="gregpics/pancakes.jpg" class="rounded">
                             </span>
                         </p>
                     </li>
@@ -115,7 +107,7 @@
                         <i>Bacon Egg Cheese </i><sub>$ </sub><sub id="subbec">5.99</sub>
                         <p>
                                 <span class="foodPic">
-                                    <img src="gregpics/bec.jpg">
+                                    <img src="gregpics/bec.jpg" class="rounded">
                                 </span>
                         </p>
                     </li>
@@ -123,7 +115,7 @@
                         <i>Omelete </i><sub>$ </sub><sub id="subomlet">9.99</sub>
                         <p>
                                 <span class="foodPic">
-                                    <img src="gregpics/omelet.jpg">
+                                    <img src="gregpics/omelet.jpg" class="rounded">
                                 </span>
                         </p>
                     </li>
@@ -131,7 +123,7 @@
                         <i>Tacos </i><sub>$ </sub><sub id="subtacos">7.99</sub>
                         <p>
                                 <span class="foodPic">
-                                    <img src="gregpics/tacos.jpg">
+                                    <img src="gregpics/tacos.jpg" class="rounded">
                                 </span>
                         </p>
                     </li>
@@ -139,7 +131,7 @@
                         <i><del>Burgers <sub>$ </sub><sub id="subhamburger">12.99</sub></del></i>
                         <p>
                                 <span class="foodPic">
-                                    <img src="gregpics/hamburger.jpg">
+                                    <img src="gregpics/hamburger.jpg" class="rounded">
                                 </span>
                         </p>
                     </li>
@@ -147,7 +139,7 @@
                         <i>Milkshakes </i><sub>$ </sub><sub id="submilkshake">4.50</sub>
                         <p>
                                 <span class="foodPic">
-                                    <img src="gregpics/milkshake.jpg">
+                                    <img src="gregpics/milkshake.jpg" class="rounded">
                                 </span>
                         </p>
                     </li>
@@ -155,7 +147,7 @@
                         <i>Buffalo Wings <sub>$ </sub><sub id="subwings">10</sub></i>
                         <p>
                                 <span class="foodPic">
-                                    <img src="gregpics/wings.jpg">
+                                    <img src="gregpics/wings.jpg" class="rounded">
                                 </span>
                         </p>
                     </li>
@@ -163,7 +155,7 @@
                         <i><del>Baked Ziti <sub>$ </sub><sub id="subziti">8.99</sub></del></i>
                         <p>
                                 <span class="foodPic">
-                                    <img src="gregpics/ziti.jpg">
+                                    <img src="gregpics/ziti.jpg" class="rounded">
                                 </span>
                         </p>
                     </li>
@@ -171,7 +163,7 @@
                         <i>Soda </i><sub>$ </sub><sub id="subsoda">1.25</sub>
                         <p>
                                 <span class="foodPic">
-                                    <img src="gregpics/soda.jpg">
+                                    <img src="gregpics/soda.jpg" class="rounded">
                                 </span>
                         </p>
                     </li>
@@ -187,8 +179,8 @@
     </div>
 </body>
 
-    <!--Feature 8 Geolocation-->
     <script>
+
         function firstLoad()
         {
             setLinksOthers();
