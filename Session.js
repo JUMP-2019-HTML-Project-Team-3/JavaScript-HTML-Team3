@@ -86,6 +86,7 @@ function logout(){
 
     sure = confirm("Are you sure you want to logout?");
     if(sure){
+        alert("Goodbye! See you next time!");
         goToHome();
     }
     else{

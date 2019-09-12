@@ -70,6 +70,16 @@
       background-color: rgb(165, 23, 23);
       text-decoration: underline;
     }
+
+    .left{
+      /* any element calling class center */
+      text-align: left;
+      color: white;
+      font-weight: bolder !important;
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif !important;
+      /* font-size: large !important; */
+    }
+
     /* NAVBAR Dropdown Button settings */
       .dropbtn {
         /* dropdowns */
