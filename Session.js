@@ -40,8 +40,7 @@ function setLinksIndex(){
     }
 }
 
-function setLinksOthers()
-{
+function setLinksOthers(){
     var parameters = location.search.split("?");
 
     if(parameters[1] != undefined){
@@ -72,18 +71,13 @@ function checkUser(){
     document.getElementById("sb1");
     var tryUser = document.getElementById("uID").value;
     var tryPass = document.getElementById("pID").value;
-    //var userList = document.cookie.split(";");
     
-    //var newUser = new User(tryUser, tryPass);
-    this.alert("Login Successful: Welcome new user");
+    this.alert("Login Successful: Welcome " + tryUser);
     sessionStorage.setItem("user", tryUser);
-    sessionStorage.setItem("password", tryPass);
-    //document.cookie = newUser.userName + ";" + newUser.password + ";";                
-    
+    sessionStorage.setItem("password", tryPass);  
 }
 
 function logout(){
-
     sure = confirm("Are you sure you want to logout?");
     if(sure){
         alert("Goodbye! See you next time!");

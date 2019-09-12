@@ -9,7 +9,7 @@
     align-items: stretch;
     background-color:rgb(165, 23, 23) !important;
     color:white !important;
-    padding:20px !important;
+    padding:1% !important;
     font-weight: bolder !important;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif !important;
     font-size: large !important;
@@ -136,7 +136,7 @@
 	
 	/* Creates border */
 	.outer-box-frame {
-    border:  1rem solid rgba(43, 80, 110, 1);
+    border:  1rem solid rgba(43, 80, 110, 0.864);
     border-radius: 5px/5px;
     margin-left: 7px; 
     margin-right: 7px;
@@ -145,7 +145,8 @@
 
 	/* Sets background color */
 	body {
-    background-color: wheat;
+    background-color: #e1d3d3aa;
+    background-image: url("Index/matthew_images/green-cup.png");
 	}
 	
 	/* Tells all paragraph elements to be of this specified font-family */

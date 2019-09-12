@@ -25,10 +25,10 @@
 
   <body onload="setLinksIndex();" class="container-fluid">
     <!-- NAV BAR HTML -->
-      <nav class="bar navbar-nav">
+      <nav class="bar navbar-nav container-fluid">
         <ul>
           <h1 class="left">Look at Our Restaurants!.com</h1>
-          <li><a id="indexPage" class="navDropLinks" href="#">Home</a>
+          <li class="list-inline"><a id="indexPage" class="navDropLinks" href="#">Home</a>
             <!-- Dropdown to Foodie Pages Links -->
             <div class="dropdown">
                 <button class="dropbtn">Our Foodie's Pages</button>
@@ -45,8 +45,7 @@
             <div class="right"><button id="log" class="login" onclick="document.getElementById('id01').style.display='block'" 
               style="width:auto;">Login</button>
             </div>
-            <!-- Logout Button / Hidden by default -->
-            <!-- <div id="lgout" class="hidden"><button class="logout" style="width:auto;">Logout</button></div> -->
+            <!-- Logout Button / Login is changed to logout by javascript -->
           </li>
             <div id="id01" class="modal">
                 <form class="modal-content animate">
@@ -82,7 +81,7 @@
     <!-- NAV BAR END -->
 
     <!-- Create Body Border Wrap -->
-    <div class="outer-box-frame">
+    <div class="outer-box-frame container-fluid">
     <!-- Opening Site Header -->
     <h1>Welcome to <span style="color:red">Look at Our Restaurants!</span>.com !!!</h1>
 
