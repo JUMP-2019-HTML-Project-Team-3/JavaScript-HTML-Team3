@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html>
 
+<!-- Boostrap Stuff -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> 
+
 <link rel="stylesheet" href="greg.css">
 <link rel="stylesheet" href="../TeamTemplate.css">
 <script src="../Session.js"></script>
@@ -9,13 +15,9 @@
 <meta charset="utf-8"/>
 </head>
 
-<!--Layout (Flex box Layout)-->
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-
 <body onload="firstLoad()">
     <!-- NAV BAR HTML -->
-            <nav class="bar">
+            <nav class="bar row">
               <ul>
                 <h1 class="left">Look at Our Restaurants!.com</h1>
                 <li><a class="navDropLinks" id="indexPage" href="../Index/Index.html">Home</a>
@@ -33,18 +35,41 @@
     <!-- NAV BAR END -->
 
     <div class="outer-box-frame">
-    <span class="topSpan"><p class="TopFont"><b id="orderTitle">Order Food</b></p></span>
-    <section>
-        <aside>
+
+    <div class="container">
+        <div class="col-sm-12">
+            <p class="TopFont text-center">Order Food</p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div style="padding-right: 20; padding-left: 20px;" class="col-sm-2 container">
             <p>
                 <!--Feature 7 Forms-->
                 <form>
-                    Name:<br>
-                    <input type="text" name="firstname"><br>
-                    Deliver Latitude:<br>
-                    <input type="text" name="latDeliv" id="latDelivid"><br>
-                    Deliver Longitude:<br>
-                    <input type="text" name="longDeliv" id="longDelivid">
+                    <div class="input-group mb-2">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Name</span>
+                        </div>
+
+                        <input type="text" class="form-control">
+                    </div>
+
+                    <div class="input-group mb-2">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Deliver Latitude:</span>
+                        </div>
+
+                        <input type="text" class="form-control" id="latDelivid">
+                    </div>
+
+                    <div class="input-group mb-2">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Deliver Longitude:</span>
+                        </div>
+
+                        <input type="text" class="form-control" id="longDelivid">
+                    </div>
                 </form>
             </p>
             <p>
@@ -62,14 +87,15 @@
                     Total: 0
                 </div>
             </p>
-        </aside>
-        <article>
+        </div>
+
+        <div class="col-sm-10">
             <!--Feature 4 Lists-->
             <!--Feature 1 Attributes-->
             <!--Feature 2 Formating The sub the del-->
             <nav>
                 <ul id-="ul1" style="padding-right: 40px; padding-left: 40px;">
-                    <li id="lipancakes" class="itemList" onclick="checkItem('pancakes')">
+                    <li id="lipancakes" class="list-group-item itemList bg-transparent" onclick="checkItem('pancakes')">
                         <i>Pancakes </i><sub>$ </sub><sub id="subpancakes">9.99</sub>
                         <p>
                             <span class="foodPic">
@@ -77,7 +103,7 @@
                             </span>
                         </p>
                     </li>
-                    <li id="libec" class="itemList" onclick="checkItem('bec')">
+                    <li id="libec" class="itemList list-group-item bg-transparent" onclick="checkItem('bec')">
                         <i>Bacon Egg Cheese </i><sub>$ </sub><sub id="subbec">5.99</sub>
                         <p>
                                 <span class="foodPic">
@@ -85,7 +111,7 @@
                                 </span>
                         </p>
                     </li>
-                    <li id="liomlet" class="itemList" onclick="checkItem('omlet')">
+                    <li id="liomlet" class="itemList list-group-item bg-transparent" onclick="checkItem('omlet')">
                         <i>Omelete </i><sub>$ </sub><sub id="subomlet">9.99</sub>
                         <p>
                                 <span class="foodPic">
@@ -93,7 +119,7 @@
                                 </span>
                         </p>
                     </li>
-                    <li id="litacos" class="itemList" onclick="checkItem('tacos')">
+                    <li id="litacos" class="itemList list-group-item bg-transparent" onclick="checkItem('tacos')">
                         <i>Tacos </i><sub>$ </sub><sub id="subtacos">7.99</sub>
                         <p>
                                 <span class="foodPic">
@@ -101,7 +127,7 @@
                                 </span>
                         </p>
                     </li>
-                    <li id="lihamburger" class="itemList" onclick="checkItem('hamburger')">
+                    <li id="lihamburger" class="itemList list-group-item disabled bg-transparent" onclick="checkItem('hamburger')">
                         <i><del>Burgers <sub>$ </sub><sub id="subhamburger">12.99</sub></del></i>
                         <p>
                                 <span class="foodPic">
@@ -109,7 +135,7 @@
                                 </span>
                         </p>
                     </li>
-                    <li id="limilkshake" class="itemList" onclick="checkItem('milkshake')">
+                    <li id="limilkshake" class="itemList list-group-item bg-transparent" onclick="checkItem('milkshake')">
                         <i>Milkshakes </i><sub>$ </sub><sub id="submilkshake">4.50</sub>
                         <p>
                                 <span class="foodPic">
@@ -117,7 +143,7 @@
                                 </span>
                         </p>
                     </li>
-                    <li id="liwings" class="itemList" onclick="checkItem('wings')">
+                    <li id="liwings" class="itemList list-group-item bg-transparent" onclick="checkItem('wings')">
                         <i>Buffalo Wings <sub>$ </sub><sub id="subwings">10</sub></i>
                         <p>
                                 <span class="foodPic">
@@ -125,7 +151,7 @@
                                 </span>
                         </p>
                     </li>
-                    <li id="liziti" class="itemList" onclick="checkItem('ziti')">
+                    <li id="liziti" class="itemList list-group-item disabled bg-transparent" onclick="checkItem('ziti')">
                         <i><del>Baked Ziti <sub>$ </sub><sub id="subziti">8.99</sub></del></i>
                         <p>
                                 <span class="foodPic">
@@ -133,7 +159,7 @@
                                 </span>
                         </p>
                     </li>
-                    <li id="lisoda" class="itemList" onclick="checkItem('soda')">
+                    <li id="lisoda" class="itemList list-group-item bg-transparent" onclick="checkItem('soda')">
                         <i>Soda </i><sub>$ </sub><sub id="subsoda">1.25</sub>
                         <p>
                                 <span class="foodPic">
@@ -144,11 +170,12 @@
                 </ul>
             </nav>
             </p>
-        </article>
-    </section>
-    <footer>
-        <p>Contact Us</p>
-    </footer>
+        </div>
+    </div>
+
+    <div class="container">
+        <p class="text-center">Contact Us</p>
+    </div>
     </div>
 </body>
 
@@ -161,8 +188,6 @@
             document.getElementById("resetButton").innerHTML = drawReset();
 
             checkCookies();
-
-            setLinks();
         }
 
 
@@ -193,7 +218,7 @@
 
                 for(i = 0; i < cookieList.length; i++)
                 {
-                    document.getElementById("li" + cookieList[i]).style = "";
+                    document.getElementById("li" + cookieList[i]).classList.remove("active");
                 }
             }catch(err)
             {
@@ -226,7 +251,8 @@
                 {
                     if(cookieList[i] == aItem)
                     {
-                        document.getElementById("li" + cookieList[i]).style = "";
+                        document.getElementById("li" + cookieList[i]).classList.remove("active");
+                        document.getElementById("li" + cookieList[i]).classList.add("bg-transparent");
                         cookieList.splice(i, 1);
                         found = true;
                     }
@@ -261,9 +287,8 @@
 
             for(i = 0; i < cookieList.length; i ++)
             {
-                var tempObj = document.getElementById("li" + cookieList[i]);
-                tempObj.style.borderStyle = "solid";
-                tempObj.style.backgroundColor = "grey";
+                document.getElementById("li" + cookieList[i]).classList.remove("bg-transparent");
+                document.getElementById("li" + cookieList[i]).classList.add("active");
 
                 total = total + parseFloat(document.getElementById("sub" + cookieList[i]).innerText,10);
             }
