@@ -39,8 +39,20 @@
 	margin-right: 15px;
 }
 
-.video-collapse.in {
+/*.video-collapse {
     display: block !important;
+	margin-left: auto;
+	margin-right: auto;
+}*/
+
+.form-control-inline {
+    min-width: 0;
+    width: auto;
+    display: inline;
+}
+
+.img-thumbnail {
+    background: #0d807c;
 }
 
 canvas {
