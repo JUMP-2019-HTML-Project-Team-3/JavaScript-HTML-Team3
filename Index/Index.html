@@ -35,9 +35,11 @@
             <!-- Display login user name if logged in -->
             <div id="displayName" class="show"></div>
             <!-- Login Button Pop Up -->
-            <div class="right"><button class="login" onclick="document.getElementById('id01').style.display='block'" 
+            <div class="right"><button id="log" class="login" onclick="document.getElementById('id01').style.display='block'" 
               style="width:auto;">Login</button>
             </div>
+            <!-- Logout Button / Hidden by default -->
+            <!-- <div id="lgout" class="hidden"><button class="logout" style="width:auto;">Logout</button></div> -->
           </li>
             <div id="id01" class="modal">
                 <form class="modal-content animate">
