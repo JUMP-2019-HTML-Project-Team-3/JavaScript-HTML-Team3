@@ -13,9 +13,14 @@ function setLinksIndex()
     //sessionUser = stringCookie[0];
     //sessionPass = stringCookie[1];
     if (sessionUser != null) {
-        document.getElementById("log").className="logout show";
-        document.getElementById("log").innerHTML = "Logout";
-        document.getElementById("log").ondblclick = logout();
+        var newButton = document.getElementById("log");
+        newButton.className ="logout show";
+        newButton.innerHTML = "Logout";
+        // newButton.setAttribute("onclick","");
+        // newButton.setAttribute("href", "#");
+        newButton.onclick=logout;
+        //document.getElementById("log").removeEventListener(onclick);
+        
         var parameters = location.search.split("?");
         if(parameters != null){
             document.getElementById("displayName").innerHTML = "Welcome" + "&emsp;" + sessionUser;
@@ -72,6 +77,12 @@ function checkUser(){
 
 function logout(){
 
-    alert("You have successfully logged out");
-    //GamepadButton.
+    sure = confirm("Are you sure you want to logout?");
+    if(sure){
+        sessionStorage.clear();
+        location.reload();
+    }
+    else{
+        return;
+    }
 }
