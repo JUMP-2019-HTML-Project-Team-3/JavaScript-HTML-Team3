@@ -13,6 +13,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!-- Meta for Bootstrap -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="../TeamTemplate.css">
     <link rel="stylesheet" type="text/css" href="Index.css">
@@ -21,9 +23,9 @@
     <script src="../Session.js"></script>
   </head>
 
-  <body onload="setLinksIndex();">
+  <body onload="setLinksIndex();" class="container-fluid">
     <!-- NAV BAR HTML -->
-      <nav class="bar">
+      <nav class="bar navbar-nav">
         <ul>
           <h1 class="left">Look at Our Restaurants!.com</h1>
           <li><a id="indexPage" class="navDropLinks" href="#">Home</a>
@@ -31,7 +33,6 @@
             <div class="dropdown">
                 <button class="dropbtn">Our Foodie's Pages</button>
                 <div class="dropdown-content">
-                  <script>setLinks();</script>
                   <a id="gregPage" class="navDropLinks" href="../greg/greg.html">Greg's Page</a>
                   <a id="omranPage" class="navDropLinks" href="../Omran/Omran_webpage.html">Chef Recipe</a>
                   <a id="rebeccaPage" class="navDropLinks" href="../Rebecca/RebeccaPage.html">Salki's Noms Cafe</a>
@@ -83,7 +84,7 @@
     <!-- Create Body Border Wrap -->
     <div class="outer-box-frame">
     <!-- Opening Site Header -->
-    <h1>Welcome to <span style="color:red">Look at Our Restaurants!.com</span> !!!</h1>
+    <h1>Welcome to <span style="color:red">Look at Our Restaurants!</span>.com !!!</h1>
 
     <!-- Opening Site Sub Headers -->
     <h2>You're in the right place to discover great food!</h2>
@@ -96,13 +97,6 @@
     <!-- Feature 2: (cite see below) -->
     <p>Look at Our Restaurants's! goal is to: <q>Show you where the good food is.</q><cite>- Aristotle</cite></p>
 
-    <!-- Feature 2: (block quote below) -->
-    <p>Here is a quote from WYLA's website:</p>
-    <blockquote>
-      <p>"This is a really good site for food!"
-      </p>
-      <footer>— Socrates</footer>
-    </blockquote>
     <!-- This is a test image use CSS img1 for formatting -->
     <embed id="img1" src="matthew_images/burger.jpg">
 
