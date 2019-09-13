@@ -74,10 +74,7 @@
         text-align: center;
     }
     /* class element defaults */
-    .left{
-        /* any element calling class center */
-        text-align: left;
-    }
+
 /* End Text Formats */
 
 /* Button Formats */
