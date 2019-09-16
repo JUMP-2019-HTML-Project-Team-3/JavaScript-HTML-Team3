@@ -222,6 +222,11 @@ input[type=text], input[type=password] {
     font-size: 35px;
     font-weight: bold;
   }
+
+  .close{
+  color: whitesmoke; 
+  opacity: 1;
+  }
   
   .LogClose:hover,
   .LogClose:focus {
