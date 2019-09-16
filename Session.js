@@ -13,7 +13,7 @@ function setLinksIndex(){
         var newButton = document.getElementById("log");
         newButton.className ="logout show";
         newButton.innerHTML = "Logout";
-        newButton.onclick=logout;
+        newButton.onclick = logout;
         
         var parameters = location.search.split("?");
         if(parameters != null){
@@ -91,3 +91,8 @@ function logout(){
 function goToHome(){
     window.location.replace("../Index/Index.html?Page?Logout");
 }
+
+// $('.modal').filter('[class*=_dialog]').on('show.bs.modal', function () {
+//     // This makes the dialog expand when shown in a bootstrap dlg
+//     $(this).find('.chosen-container').css({width: "100%"});
+// });
