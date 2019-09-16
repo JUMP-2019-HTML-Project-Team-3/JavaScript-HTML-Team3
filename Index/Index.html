@@ -4,21 +4,18 @@
 
   <!-- Define Meta Data, Call CSS and JS external Documents -->
   <head>
-    <!-- BootStrap 4 -->
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <!-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <!-- Popper JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <!-- Latest compiled JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <!-- Meta for Bootstrap -->
+    <!-- Meta -->
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
     <!-- CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="../TeamTemplate.css">
     <link rel="stylesheet" type="text/css" href="Index.css">
     <!-- JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script src="Index.js"></script>
     <script src="../Session.js"></script>
   </head>
@@ -47,14 +44,14 @@
             </div>
             <!-- Logout Button / Login is changed to logout by javascript -->
           </li>
-            <div id="id01" class="modal">
-                <form class="modal-content animate">
+            <div id="id01" class="LogModal">
+                <form class="LogModal-content LogAnimate">
                   <div class="imgcontainer">
-                    <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                    <span onclick="document.getElementById('id01').style.display='none'" class="LogClose" title="Close Modal">&times;</span>
                     <img src="matthew_images/Logo.jpg" alt="Avatar" class="avatar">
                   </div>
 
-                  <div class="container">
+                  <div class="LogContainer">
                     <label for="uname"><b>Username</b></label>
                     <input id="uID" type="text" placeholder="Enter Username" name="uname" required>
               
@@ -67,7 +64,7 @@
                       <input type="checkbox" checked="checked" name="remember"> Remember me
                     </label>
                   </div>
-                  <div class="container" style="background-color:#f1f1f1">
+                  <div class="LogContainer" style="background-color:#f1f1f1">
                     <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
                     <span class="psw">Forgot <a href="ForgotPassword.html">password?</a></span>
                   </div>
@@ -89,7 +86,7 @@
     <h2>You're in the right place to discover great food!</h2>
     <h3>Check out the Navigation bar above to link to our favorite restaurants and recipes!</h3>
 
-    <!-- Feature 2: (abbreviations below) -->
+    <!-- Feature 2: (Bootstrap Tool tip below) -->
     <h6>The
       <span data-toggle="tooltip" data-placement="bottom" title="Look At Our Restaurants">
         LAOR
@@ -101,59 +98,69 @@
       });
       </script>
 
-    <!-- Feature 2: Quotations (short quote below) -->
     <!-- Feature 2: (cite see below) -->
     <p>Look at Our Restaurants's! goal is to: <q>Show you where the good food is.</q><cite>- Aristotle</cite></p>
 
     <!-- Bootstrap Card Group -->
     <div class="container">
       <h2>Our Contributors</h2>
-      <div class="card-group cardText">
+      <div id="contributors" class="card-group cardText">
+        <!-- Greg Card -->
         <div class="card bg-dark" style="width:400px">
-          <img class="card-img-top" src="matthew_images/greg.jpg" alt="Card image" style="width:100%">
-          <div class="card-body">
-            <h4 class="card-title">Greg</h4>
-            <p class="card-text">Greg is a beastly full stack developer. He's a front end master
-               and a Blue Moon aficionado...
-            </p>
-            <a href="#" class="btn btn-warning align-self-end" style="position: absolute; bottom: 3%;">
-              See Profile</a>
-          </div>
-        </div>
-        <div class="card bg-primary" style="width:400px">
-          <img class="card-img-top" src="matthew_images/chef.png" alt="Card image" style="width:100%">
-          <div class="card-body">
-            <h4 class="card-title">Omran</h4>
-            <p class="card-text">Also known as Chef. Master of recipies and front end animations...</p>
-            <a href="#" class="btn btn-warning align-self-end" style="position: absolute; bottom: 3%">
-              See Profile</a>
-          </div>
-        </div>
-        <div class="card bg-success" style="width:400px">
-          <img class="card-img-top" src="matthew_images/rebecca.jpg" alt="Card image" style="width:100%">
-          <div class="card-body">
-            <h4 class="card-title">Rebecca</h4>
-            <p class="card-text">"Salki's Noms is a passion project turned functioning cafe, 
-              specializing in some super cute food! I'm excited to keep it growing and bring a 
-              smile to our customer's faces."</p>
-            <a href="#" class="btn btn-warning align-self-end" 
-            style="bottom:3%;">
-              See Profile</a>
-          </div>
-        </div>
-        <div class="card bg-danger" style="width:400px">
-          <img class="card-img-top" src="matthew_images/matthew.png" alt="Card image" style="width:100%">
-          <div class="card-body">
-            <h4 class="card-title">Matthew</h4>
-            <p class="card-text">Foodie and full stack developer.  Likes pizza...</p>
-            <a href="#" class="btn btn-warning align-self-end" 
-              style="position: absolute; bottom:3%;">
+            <img class="card-img-top" src="matthew_images/greg.jpg" alt="Card image" style="width:100%">
+            <div class="card-body">
+              <h4 class="card-title">Greg</h4>
+              <p class="card-text">Greg is a beastly full stack developer. He's a front end master
+                 and a Blue Moon aficionado...
+              </p>
+              <!-- Profile Button -->
+              <a id="gbutton" href="#" onclick="contributor();" class="btn btn-warning align-self-end" 
+                data-toggle="modal" data-target="#smallModal" style="position: absolute; bottom: 3%;">
                 See Profile</a>
+            </div>
           </div>
-        </div> 
+          <!-- Omran Card -->
+          <div class="card bg-primary" style="width:400px">
+            <img class="card-img-top" src="matthew_images/chef.png" alt="Card image" style="width:100%">
+            <div class="card-body">
+              <h4 class="card-title">Omran</h4>
+              <p class="card-text">Also known as Chef. Master of recipies and front end animations...</p>
+              <!-- Profile Button -->
+              <a id="obutton" href="#" class="btn btn-warning align-self-end" data-toggle="modal" data-target="#smallModal"
+                style="position: absolute; bottom: 3%" onclick="contributor();">
+                See Profile</a>
+            </div>
+          </div>
+          <!-- Rebecca Card -->
+          <div class="card bg-success" style="width:400px">
+            <img class="card-img-top" src="matthew_images/rebecca.jpg" alt="Card image" style="width:100%">
+            <div class="card-body">
+              <h4 class="card-title">Rebecca</h4>
+              <p class="card-text">"Salki's Noms is a passion project turned functioning cafe, 
+                specializing in some super cute food! I'm excited to keep it growing and bring a 
+                smile to our customer's faces."</p>
+              <!-- Profile Button -->
+              <a id="rbutton" href="#" class="btn btn-warning align-self-end" data-toggle="modal" data-target="#smallModal" 
+              style="bottom:3%;" onclick="contributor();">
+                See Profile</a>
+            </div>
+          </div>
+          <!-- Matthew Card -->
+          <div class="card bg-danger" style="width:400px">
+            <img class="card-img-top" src="matthew_images/matthew.png" alt="Card image" style="width:100%">
+            <div class="card-body">
+              <h4 class="card-title">Matthew</h4>
+              <p class="card-text">Foodie and full stack developer.  Likes pizza...</p>
+              <!-- Profile Button -->
+              <a  id="mbutton" href="#" class="btn btn-warning align-self-end" style="position: absolute; bottom:3%; width:auto; display: block;"
+                data-toggle="modal" data-target="#smallModal" onclick="contributor();">
+                  See Profile</a>
+            </div>
+          </div> 
+
       </div>
     </div>
-
+    <!-- End Card Group -->
     <!-- Feature 5: HTML Forms (input form see below) -->
     <!-- Feature 5:   (radio button see below) -->
       <!-- <form>
@@ -171,5 +178,26 @@
           USA</p>
       </address>
     </div>
+
+    <!-- Contributor Modals -->
+    <!-- small modal (show gifs)-->
+    <div class="modal fade" id="smallModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+        <div class="modal-dialog modal-sm">
+          <div id="modalBox" class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title" id="myModalLabel">Header Goes Here, JS overwrites to each person</h4>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div id="modContent" class="modal-body"></div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>  
+      <!-- End Modal -->
+
   </body>
 </html>

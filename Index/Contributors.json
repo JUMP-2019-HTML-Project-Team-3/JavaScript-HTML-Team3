@@ -1,0 +1,33 @@
+{
+    "Contributors":{
+        "Greg":{
+            "name": "Greg", 
+            "bio":  "Greg is a beastly full stack developer. He's a front end master and a Blue Moon aficionado...",
+            "profile_image":    "matthew_images/greg.jpg",
+            "gif_image" : "matthew_images/gregGif.gif"   
+        },
+
+        "Omran":{
+            "name": "Omran", 
+            "bio":  "Also known as Chef. Master of recipies and front end animations...",
+            "profile_image":    "matthew_images/chef.png",
+            "gif_image" : "matthew_images/omranGif.gif" 
+        },
+
+        "Rebecca":{
+            "name": "Greg", 
+            "bio":  ["Salki's Noms is a passion project turned functioning cafe",
+                    "specializing in some super cute food! I'm excited to keep it growing and bring a",
+                    "smile to our customer's faces."],
+            "profile_image":    "matthew_images/greg.jpg",
+            "gif_image" : "matthew_images/gregGif.gif"
+        },
+
+        "Matthew":{
+            "name": "Matthew", 
+            "bio":  "Foodie and full stack developer.  Likes pizza...",
+            "profile_image":    "matthew_images/matthew.png",
+            "gif_image" :       "matthew_images/matthewGif.gif"
+        }
+    }
+}
