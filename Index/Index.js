@@ -12,8 +12,12 @@ function loginWindow(){
     }
 }
 
+// Tailors the profile buttons and modal on the Card Deck to each Contributor
+// Reusing a single modal
 function contributor(){
+    // get the source button to tailor to each user
     var source  =    event.currentTarget;
+    // grab the elements to be modified
     var mod     =    document.getElementById("modalBox");
     var header  =    document.getElementById("myModalLabel");
     var headerBox =  document.getElementById("headerBox");
@@ -21,6 +25,7 @@ function contributor(){
     var footer  =    document.getElementById("footerBox"); 
     var image   =    document.createElement("img");
 
+    //Fit all images in the modal
     image.classList.add("img-fluid");
     // Greg Button
     if(source.id == "gbutton"){
