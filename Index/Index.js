@@ -16,8 +16,9 @@ function contributor(){
     var source  =    event.currentTarget;
     var mod     =    document.getElementById("modalBox");
     var header  =    document.getElementById("myModalLabel");
+    var headerBox =  document.getElementById("headerBox");
     var content =    document.getElementById("modContent");
-    var footer  =    document.getElementsByClassName("modal-footer"); 
+    var footer  =    document.getElementById("footerBox"); 
     var image   =    document.createElement("img");
 
     image.classList.add("img-fluid");
@@ -25,18 +26,22 @@ function contributor(){
     if(source.id == "gbutton"){
         image.src = "matthew_images/gregGif.gif";
 
+        // Check the color Unique in Body
         if(mod.classList.length > 1){
             mod.classList.replace(mod.classList[1], "bg-dark");
         }
         else{mod.classList.add("bg-dark");} 
 
         header.innerHTML = "So about Greg...";
+        headerBox.classList.add("bg-secondary");
+        footer.classList.add("bg-secondary");
         header.style = "color: whitesmoke";
     }
     // Omran Button
     else if(source.id == "obutton"){
         image.src = "matthew_images/omranGif.gif"; 
 
+        // Check Unique Body color
         if(mod.classList.length > 1){
             mod.classList.replace(mod.classList[1], "bg-primary");
         }
@@ -44,12 +49,15 @@ function contributor(){
         else{mod.classList.add("bg-primary");}
         
         header.innerHTML = "So about Omran...";
+        headerBox.classList.add("bg-secondary");
+        footer.classList.add("bg-secondary");
         header.style = "color: whitesmoke";
     }
     // Rebecca Button
     else if(source.id == "rbutton"){
         image.src = "matthew_images/rebeccaGif.gif";
 
+        // Check Unique Body color
         if(mod.classList.length > 1){
             mod.classList.replace(mod.classList[1], "bg-success");
         }
@@ -57,12 +65,15 @@ function contributor(){
         else{mod.classList.add("bg-success");}
 
         header.innerHTML = "So about Rebecca...";
-        header.style = "color: whitesmoke"; 
+        headerBox.classList.add("bg-secondary");
+        footer.classList.add("bg-secondary");
+        header.style = "color: whitesmoke";
     }
     // Matthew Button
     else {
         image.src = "matthew_images/matthewGif.gif"; 
 
+        // Check Unique Body color
         if(mod.classList.length > 1){
             mod.classList.replace(mod.classList[1], "bg-danger");
         }
@@ -70,7 +81,9 @@ function contributor(){
         else{mod.classList.add("bg-danger");}
 
         header.innerHTML = "So about Matthew...";
-        header.style = "color: whitesmoke"
+        headerBox.classList.add("bg-secondary");
+        footer.classList.add("bg-secondary");
+        header.style = "color: whitesmoke";
     }
 
     // Check for and replace existing image per profile in modal
